@@ -1,0 +1,16 @@
+# Azure Developer CLI: `azd up` provisions infra/ and deploys the bot to App Service.
+name: ops-copilot
+metadata:
+  template: ops-copilot@0.1.0
+infra:
+  provider: bicep
+  path: infra
+services:
+  bot:
+    project: .
+    language: py
+    host: appservice
+hooks:
+  postprovision:
+    shell: sh
+    run: python scripts/setup_search_index.py

@@ -1,0 +1,36 @@
+openapi: 3.0.3
+info:
+  title: Contoso HR API (leave)
+  version: 1.0.0
+  description: Called by the HR agent as an OpenAPI tool with the user's delegated token.
+servers:
+  - url: https://hr-api.contoso.example
+security:
+  - entra: [api://contoso-hr/Leave.Read]
+paths:
+  /me/leave-balance:
+    get:
+      operationId: get_leave_balance
+      summary: Remaining leave for the signed-in employee
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  employee: { type: string }
+                  unit: { type: string, enum: [days] }
+                  annual: { type: number }
+                  sick: { type: number }
+components:
+  securitySchemes:
+    entra:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            api://contoso-hr/Leave.Read: Read own leave balance

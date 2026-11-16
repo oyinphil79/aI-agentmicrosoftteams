@@ -1,0 +1,16 @@
+{"id": "k1", "query": "What is the hotel limit in London?", "route": "knowledge", "must_contain": ["260"], "citations": ["Travel Policy"]}
+{"id": "k2", "query": "What is the hotel limit in a standard city?", "route": "knowledge", "must_contain": ["180"], "citations": ["Travel Policy"]}
+{"id": "k3", "query": "How long do I have to submit an expense report after a trip?", "route": "knowledge", "must_contain": ["30 days"], "citations": ["Travel Policy"]}
+{"id": "k4", "query": "How many days per week can I work remotely?", "route": "knowledge", "must_contain": ["3 days"], "citations": ["Remote Work Policy"]}
+{"id": "k5", "query": "Is there a home office allowance for remote work?", "route": "knowledge", "must_contain": ["400"], "citations": ["Remote Work Policy"]}
+{"id": "k6", "query": "How many annual leave days can be carried over to next year?", "route": "knowledge", "must_contain": ["5"], "citations": ["Leave Policy"]}
+{"id": "k7", "query": "How long is parental leave?", "route": "knowledge", "must_contain": ["16 weeks"], "citations": ["Leave Policy"]}
+{"id": "k8", "query": "How do I reset my password?", "route": "knowledge", "must_contain": ["self-service"], "citations": ["IT Security Policy"]}
+{"id": "k9", "query": "What is the minimum password length?", "route": "knowledge", "must_contain": ["14 characters"], "citations": ["IT Security Policy"]}
+{"id": "k10", "query": "What is the policy on pet insurance?", "route": "knowledge", "must_contain": ["won't guess"], "citations": []}
+{"id": "k11", "query": "What did I miss in my emails about the VPN?", "route": "knowledge", "must_contain": ["GlobalConnect"], "citations": []}
+{"id": "i1", "query": "My VPN keeps disconnecting and I can't work", "route": "it", "tool": "create_ticket", "args": {"category": "network", "priority": "high"}}
+{"id": "i2", "query": "My laptop screen is broken", "route": "it", "tool": "create_ticket", "args": {"category": "hardware"}}
+{"id": "i3", "query": "What is the status of INC1000?", "route": "it", "must_contain": ["In Progress"]}
+{"id": "h1", "query": "How many vacation days do I have left?", "route": "hr", "must_contain": ["14 days"]}
+{"id": "h2", "query": "Who is my manager?", "route": "hr", "must_contain": ["Morgan Lee"]}

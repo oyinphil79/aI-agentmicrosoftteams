@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.19",
+  "version": "0.1.0",
+  "id": "${{TEAMS_APP_ID}}",
+  "developer": {
+    "name": "Contoso IT",
+    "websiteUrl": "https://contoso.example/ops-copilot",
+    "privacyUrl": "https://contoso.example/ops-copilot/privacy",
+    "termsOfUseUrl": "https://contoso.example/ops-copilot/terms"
+  },
+  "name": {
+    "short": "Ops Copilot",
+    "full": "Ops Copilot - IT & HR helpdesk agent"
+  },
+  "description": {
+    "short": "Ask about policies, raise IT tickets, check your leave.",
+    "full": "Ops Copilot is a multi-agent assistant built on Microsoft Foundry. It answers company policy questions with citations, opens and tracks IT tickets (with your approval), and answers personal HR questions using your own Microsoft 365 data. AI-generated content may be incorrect."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#2F5BEA",
+  "bots": [
+    {
+      "botId": "${{BOT_ID}}",
+      "scopes": [
+        "personal",
+        "team",
+        "groupChat"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": [
+            "personal"
+          ],
+          "commands": [
+            {
+              "title": "Hotel limit",
+              "description": "What is the hotel limit in London?"
+            },
+            {
+              "title": "VPN problem",
+              "description": "My VPN keeps disconnecting"
+            },
+            {
+              "title": "Leave balance",
+              "description": "How many vacation days do I have left?"
+            },
+            {
+              "title": "Ticket status",
+              "description": "What is the status of INC1000?"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity"
+  ],
+  "validDomains": [
+    "${{BOT_DOMAIN}}"
+  ],
+  "webApplicationInfo": {
+    "id": "${{AAD_APP_CLIENT_ID}}",
+    "resource": "api://${{BOT_DOMAIN}}/botid-${{BOT_ID}}"
+  }
+}
