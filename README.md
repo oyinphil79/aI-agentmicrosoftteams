@@ -53,6 +53,7 @@ deterministic fakes, so the whole pipeline runs offline. Set `OPS_COPILOT_MODE=a
 | AI safety + prompt injection | `safety/prompt_shield.py` (Prompt Shields + heuristics, fail-closed), `safety/tool_policy.py`, `data/injection/`, `tests/test_security.py` |
 | Entra ID, Agent ID, managed identity | `infra/resources.bicep` (keyless, least-privilege RBAC), [docs/identity.md](docs/identity.md) |
 | Requirements, demos, handover | [docs/requirements.md](docs/requirements.md), [docs/demo-script.md](docs/demo-script.md), [docs/runbook.md](docs/runbook.md) |
+| Rebuild from scratch | [docs/PROJECT_PROMPT.md](docs/PROJECT_PROMPT.md): the full build prompt |
 
 ## Repository layout
 
