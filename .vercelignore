@@ -1,0 +1,9 @@
+.venv
+.azure
+tests
+evals
+infra
+appPackage
+docs
+scripts
+mcp_server

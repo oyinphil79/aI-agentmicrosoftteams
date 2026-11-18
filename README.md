@@ -35,6 +35,12 @@ Mock mode (`OPS_COPILOT_MODE=mock`, the default) replaces the model, Search, Gra
 deterministic fakes, so the whole pipeline runs offline. Set `OPS_COPILOT_MODE=azure` to use real services. See
 [docs/runbook.md](docs/runbook.md).
 
+## Web demo on Vercel
+
+`api/index.py` serves a browser demo of the pipeline in mock mode (standard library only, no Azure
+needed). Import the repo at <https://vercel.com/new> and deploy; `vercel.json` routes every path to that
+function. The production Teams/Outlook bot still deploys to Azure App Service with `azd up`.
+
 ## Where each skill shows up
 
 | Skill | Code |
